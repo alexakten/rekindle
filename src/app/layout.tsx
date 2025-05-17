@@ -82,7 +82,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "reKindle",
+  title: "reKindle™",
   description: "Designed by reKindle™",
   openGraph: {
     images: [
