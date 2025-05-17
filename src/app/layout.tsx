@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/opengraph-image.webp",
+        url: "/images/opengraph-image.webp",
         width: 1200,
         height: 630,
         alt: "Preview of reKindle",
