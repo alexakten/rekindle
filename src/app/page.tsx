@@ -39,9 +39,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex overscroll-none h-[100svh] w-screen items-center justify-center overflow-hidden">
+    <main className="flex overscroll-none select-none h-[100svh] w-screen items-center justify-center overflow-hidden">
       <h1 className={`relative text-8xl ${fontClass}`}>
-        reKindle <span className="text-xs absolute top-1 -right-3">TM</span>
+        reKindle <span className="text-lg absolute top-1 -right-3">™</span>
       </h1>
     </main>
   );

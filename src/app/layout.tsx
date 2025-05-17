@@ -15,7 +15,6 @@ const redaction20 = localFont({
   display: "swap",
 });
 
-
 const redaction35 = localFont({
   src: [{ path: "./fonts/redaction/Redaction_35-Regular.woff2", weight: "35", style: "normal" }],
   variable: "--font-redaction-35",
@@ -48,7 +47,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "reKindle",
-  description: "Design",
+  description: "Design by reKindle™",
 };
 
 export default function RootLayout({
