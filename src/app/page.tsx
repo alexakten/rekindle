@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <main className="flex bg-[#fafafa] select-none h-[100svh] w-screen items-center justify-center overflow-hidden">
-      <h1 className={`relative text-8xl ${fontClass}`}>
+      <h1 className={`relative text-5xl sm:text-8xl ${fontClass}`}>
         reKindle <span className="text-lg absolute top-1 -right-3">™</span>
       </h1>
     </main>
