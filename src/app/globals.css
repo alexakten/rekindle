@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-redaction: "redaction", serif;
+  --font-redaction-10: "redaction-10", serif;
+  --font-redaction-20: "redaction-20", serif;
+  --font-redaction-35: "redaction-35", serif;
+  --font-redaction-50: "redaction-50", serif;
+  --font-redaction-70: "redaction-70", serif;
+  --font-redaction-100: "redaction-100", serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utilities {
+  .font-redaction {
+    font-family: var(--font-redaction);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .font-redaction-10 {
+    font-family: var(--font-redaction-10);
+  }
+  .font-redaction-20 {
+    font-family: var(--font-redaction-20);
+  }
+  .font-redaction-35 {
+    font-family: var(--font-redaction-35);
+  }
+  .font-redaction-50 {
+    font-family: var(--font-redaction-50);
+  }
+  .font-redaction-70 {
+    font-family: var(--font-redaction-70);
+  }
+  .font-redaction-100 {
+    font-family: var(--font-redaction-100);
+  }
 }
