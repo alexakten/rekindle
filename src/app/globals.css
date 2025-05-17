@@ -33,3 +33,7 @@
     font-family: var(--font-redaction-100);
   }
 }
+
+body {
+  background-color: #fafafa;
+}
