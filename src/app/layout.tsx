@@ -84,6 +84,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "reKindle",
   description: "Design by reKindle™",
+  openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Preview of reKindle",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
