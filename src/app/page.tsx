@@ -7,9 +7,19 @@ export default function Home() {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
+      const x = e.clientX;
       const y = e.clientY;
+      const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-      const section = Math.floor((y / screenHeight) * 7); // 0-6
+
+      const centerX = screenWidth / 2;
+      const centerY = screenHeight / 2;
+      const dx = x - centerX;
+      const dy = y - centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+      const ratio = distance / maxDistance;
+      const section = Math.min(6, Math.floor(ratio * 7)); // clamp to 0–6
 
       const classMap = [
         "font-redaction",
@@ -29,12 +39,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex h-screen w-screen items-center justify-center">
+    <main className="flex overscroll-none h-[100svh] w-screen items-center justify-center overflow-hidden">
       <h1 className={`relative text-8xl ${fontClass}`}>
-        reKindle{" "}
-        <span className="text-xs absolute top-1 -right-3">
-          TM
-        </span>
+        reKindle <span className="text-xs absolute top-1 -right-3">TM</span>
       </h1>
     </main>
   );
