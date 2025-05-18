@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 const redaction10 = localFont({
@@ -74,12 +73,6 @@ const redaction100 = localFont({
   variable: "--font-redaction-100",
   display: "swap",
 });
-
-// const inter = Inter({
-//   subsets: ["latin"],
-//   variable: "--font-inter",
-//   display: "swap",
-// });
 
 export const metadata: Metadata = {
   title: "reKindle™ | The Growth Accelerator",
