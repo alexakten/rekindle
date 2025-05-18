@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import type { Metadata } from "next";
+// import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 const redaction10 = localFont({
@@ -75,11 +75,11 @@ const redaction100 = localFont({
   display: "swap",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "reKindle™ | The Growth Accelerator",
@@ -104,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`overflow-hidden ${inter.variable} ${redaction10.variable} ${redaction20.variable} ${redaction35.variable} ${redaction50.variable} ${redaction70.variable} ${redaction100.variable}`}
+      className={`overflow-hidden ${redaction10.variable} ${redaction20.variable} ${redaction35.variable} ${redaction50.variable} ${redaction70.variable} ${redaction100.variable}`}
     >
       <body>{children}</body>
     </html>

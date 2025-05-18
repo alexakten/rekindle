@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/ixt8usw.css");
 @import "tailwindcss";
 
 @theme {
@@ -8,7 +9,9 @@
   --font-redaction-50: "redaction-50", serif;
   --font-redaction-70: "redaction-70", serif;
   --font-redaction-100: "redaction-100", serif;
+  --font-helvetica: "helvetica-neue-lt-pro", sans-serif;
 }
+
 
 @utilities {
   .font-redaction {
@@ -31,6 +34,9 @@
   }
   .font-redaction-100 {
     font-family: var(--font-redaction-100);
+  }
+  .font-helvetica {
+    font-family: var(--font-helvetica);
   }
 }
 
