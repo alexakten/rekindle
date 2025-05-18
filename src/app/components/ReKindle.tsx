@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function ReKindle() {
+export default function Rekindle() {
   const [fontClass, setFontClass] = useState("font-redaction");
 
   useEffect(() => {
