@@ -2,40 +2,48 @@
 
 import { useEffect, useState } from "react";
 
+const FONT_CLASSES = [
+  "font-redaction",
+  "font-redaction-10",
+  "font-redaction-20",
+  "font-redaction-35",
+  "font-redaction-50",
+  "font-redaction-70",
+  "font-redaction-100",
+];
+
 export default function Rekindle() {
-  const [fontClass, setFontClass] = useState("font-redaction");
+  const [fontClass, setFontClass] = useState(FONT_CLASSES[0]);
 
   useEffect(() => {
+    let frameId: number;
+
     const handleMouseMove = (e: MouseEvent) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      const screenWidth = window.innerWidth;
-      const screenHeight = window.innerHeight;
+      if (frameId) cancelAnimationFrame(frameId);
 
-      const centerX = screenWidth / 2;
-      const centerY = screenHeight / 2;
-      const dx = x - centerX;
-      const dy = y - centerY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
-      const ratio = distance / maxDistance;
-      const section = Math.min(6, Math.floor(ratio * 7)); // clamp to 0–6
+      frameId = requestAnimationFrame(() => {
+        const { clientX: x, clientY: y } = e;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const dx = x - centerX;
+        const dy = y - centerY;
+        const distance = Math.hypot(dx, dy);
+        const maxDistance = Math.hypot(centerX, centerY);
+        const ratio = distance / maxDistance;
+        const section = Math.min(
+          FONT_CLASSES.length - 1,
+          Math.floor(ratio * FONT_CLASSES.length)
+        );
 
-      const classMap = [
-        "font-redaction",
-        "font-redaction-10",
-        "font-redaction-20",
-        "font-redaction-35",
-        "font-redaction-50",
-        "font-redaction-70",
-        "font-redaction-100",
-      ];
-
-      setFontClass(classMap[section]);
+        setFontClass(FONT_CLASSES[section]);
+      });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      cancelAnimationFrame(frameId);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   return (
