@@ -11,11 +11,13 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex justify-between w-full items-end">
-        <div className="flex text-xl font-thin gap-4">
-          <p className="w-[16rem] ">
+        <div className="flex text-base sm:text-xl font-thin gap-2 sm:gap-4">
+          <p className="w-[12rem] sm:w-[16rem] ">
             Multidisciplinary Creative Venture Platform
           </p>
-          <p className="w-[16rem]">Two Engagement Models: Cash or Equity</p>
+          <p className="hidden sm:block w-[12rem] sm:w-[16rem]">
+            Two Engagement Models: Cash or Equity
+          </p>
         </div>
         <p className="opacity-35 font-thin">© reKindle 2025</p>
       </div>
