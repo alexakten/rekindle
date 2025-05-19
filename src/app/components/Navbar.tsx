@@ -16,8 +16,8 @@ export default function Navbar() {
           <p className="w-[12rem] sm:w-[16rem] ">
             Multidisciplinary Creative Venture Platform
           </p>
-          <p className="hidden sm:block w-[12rem] sm:w-[16rem]">
-            Two Engagement Models: Cash or Equity
+          <p className="hidden sm:block w-[12rem] sm:w-[18rem]">
+            Strategy, Design, Development, and Performance
           </p>
         </div>
         <p className="opacity-35 font-thin">© reKindle 2025</p>
