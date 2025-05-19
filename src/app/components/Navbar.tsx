@@ -6,8 +6,9 @@ export default function Navbar() {
     <nav className="absolute h-full font-helvetica text-sm top-0 left-0 flex w-full justify-between flex-col items-center p-4">
       <div className="flex justify-between w-full items-start">
         <p>The Growth Accelerator</p>
-        <Link className="flex items-center gap-1" href="/">
+        <Link className="flex items-center gap-1 relative group" href="/">
           Let&apos;s talk <ArrowUpRightIcon weight="bold" size={14} />
+          <span className="absolute left-0 bottom-0 w-full h-[1px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
         </Link>
       </div>
       <div className="flex justify-between w-full items-end">
