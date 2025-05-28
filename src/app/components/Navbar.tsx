@@ -1,11 +1,11 @@
-  "use client";
+//   "use client";
 
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr/ArrowUpRight";
 
 export default function Navbar() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   return (
     <nav className="absolute h-full font-helvetica text-sm top-0 left-0 flex w-full justify-between flex-col items-center p-4">
@@ -16,7 +16,7 @@ export default function Navbar() {
           <span className="absolute left-0 bottom-0 w-full h-[1px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
         </Link>
       </div>
-      <div className="flex w-full items-start flex-col gap-6">
+      {/* <div className="flex w-full items-start flex-col gap-6">
         {["/", "/about", "/work", "/services", "/contact"].map(
           (path, index) => (
             <Link
@@ -37,7 +37,7 @@ export default function Navbar() {
             </Link>
           )
         )}
-      </div>
+      </div> */}
       <div className="flex justify-between w-full items-end">
         <div className="flex text-base sm:text-xl font-thin gap-2 sm:gap-4">
           <p className="w-[12rem] sm:w-[16rem] ">
