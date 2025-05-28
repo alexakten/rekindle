@@ -2,6 +2,18 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
+const redaction = localFont({
+  src: [
+    {
+      path: "./fonts/redaction/Redaction-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-redaction",
+  display: "swap",
+});
+
 const redaction10 = localFont({
   src: [
     {
@@ -97,7 +109,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`overflow-hidden ${redaction10.variable} ${redaction20.variable} ${redaction35.variable} ${redaction50.variable} ${redaction70.variable} ${redaction100.variable}`}
+      className={`overflow-hidden ${redaction.variable} ${redaction10.variable} ${redaction20.variable} ${redaction35.variable} ${redaction50.variable} ${redaction70.variable} ${redaction100.variable}`}
     >
       <body>{children}</body>
     </html>
