@@ -47,6 +47,15 @@ export default function Rekindle() {
   }, []);
 
   return (
+    // <div className="relative">
+    //   <h1 className={`relative text-8xl scale-50 sm:scale-100 ${fontClass}`}>
+    //     reKindle <span className="text-lg absolute top-1 -right-3">™</span>
+    //   </h1>
+    //   <span className="text-sm absolute -bottom-6 flex items-center gap-0.5 left-1/2 -translate-x-1/2">
+    //     Powered by
+    //     <KindredLogo />
+    //   </span>
+    // </div>
     <h1 className={`relative text-8xl scale-50 sm:scale-100 ${fontClass}`}>
       reKindle <span className="text-lg absolute top-1 -right-3">™</span>
     </h1>

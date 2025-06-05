@@ -3,6 +3,7 @@
 // import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr/ArrowUpRight";
+import KindredLogo from "./KindredLogo";
 
 export default function Navbar() {
   // const pathname = usePathname();
@@ -10,7 +11,9 @@ export default function Navbar() {
   return (
     <nav className="absolute h-full font-helvetica text-sm top-0 left-0 flex w-full justify-between flex-col items-center p-4">
       <div className="flex justify-between w-full items-start">
-        <p>The Growth Accelerator</p>
+        <span className="text-sm flex items-center gap-0.5">
+          Powered by <KindredLogo />
+        </span>
         <Link className="flex items-center gap-1 relative group" href="/">
           Let&apos;s talk <ArrowUpRightIcon weight="bold" size={14} />
           <span className="absolute left-0 bottom-0 w-full h-[1px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
