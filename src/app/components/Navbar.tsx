@@ -10,11 +10,14 @@ export default function Navbar() {
 
   return (
     <nav className="absolute h-full font-helvetica text-sm top-0 left-0 flex w-full justify-between flex-col items-center p-4">
-      <div className="flex justify-between w-full items-start">
-        <span className="text-sm flex items-center gap-0.5">
+      <div className="flex justify-between w-full items-center">
+        <p className="text-sm flex items-center gap-0.5">
           Powered by <KindredLogo />
-        </span>
-        <Link className="flex items-center gap-1 relative group" href="/">
+        </p>
+        <Link
+          className="flex items-center gap-1 relative group"
+          href="mailto:hello@kindredlab.io"
+        >
           Let&apos;s talk <ArrowUpRightIcon weight="bold" size={14} />
           <span className="absolute left-0 bottom-0 w-full h-[1px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
         </Link>
@@ -44,7 +47,7 @@ export default function Navbar() {
       <div className="flex justify-between w-full items-end">
         <div className="flex text-base sm:text-xl font-thin gap-2 sm:gap-4">
           <p className="w-[12rem] sm:w-[16rem] ">
-            Multidisciplinary Creative Venture Launchpad
+            Digital Brand Experience Agency
           </p>
           <p className="hidden sm:block w-[12rem] sm:w-[18rem]">
             Strategy, Design, Development, and Performance
