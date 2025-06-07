@@ -47,10 +47,10 @@ export default function Navbar() {
       <div className="flex justify-between w-full items-end">
         <div className="flex text-base sm:text-xl font-thin gap-2 sm:gap-4">
           <p className="w-[12rem] sm:w-[16rem] ">
-            Digital Brand Experience Agency
+            Multidisciplinary Creative Venture Platform
           </p>
           <p className="hidden sm:block w-[12rem] sm:w-[18rem]">
-            Strategy, Design, Development, and Performance
+            Strategy, Design, Development, and Performance.
           </p>
         </div>
         <p className="opacity-35 font-thin">© reKindle 2025</p>
