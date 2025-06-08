@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import localFont from "next/font/local";
 
 const redaction = localFont({
@@ -111,7 +112,10 @@ export default function RootLayout({
       lang="en"
       className={`overflow-hidden ${redaction.variable} ${redaction10.variable} ${redaction20.variable} ${redaction35.variable} ${redaction50.variable} ${redaction70.variable} ${redaction100.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
