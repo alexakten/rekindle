@@ -16,7 +16,7 @@ export default function Navbar() {
         </p>
         <Link
           className="flex items-center gap-1 relative group"
-          href="mailto:hello@kindredlab.io"
+          href="mailto:alex@rekindle.se"
         >
           Let&apos;s talk <ArrowUpRightIcon weight="bold" size={14} />
           <span className="absolute left-0 bottom-0 w-full h-[1px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
